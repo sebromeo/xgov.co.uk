@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <title>XGOV — Coming Soon</title>
-  <meta name="description" content="XGOV: Accelerating government innovation. Coming soon.">
-  <meta name="theme-color" content="#0e3a52">
+  <title>XGov — Coming Soon</title>
+  <meta name="description" content="XGov: Connecting people and supporting civil service networks. Coming soon.">
+  <meta name="theme-color" content="#1e5a96">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,8 +27,8 @@
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #0e3a52 0%, #04141f 100%);
-      color: #f4f1ec;
+      background: linear-gradient(135deg, #1e5a96 0%, #15447a 100%);
+      color: #ffffff;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -65,7 +65,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      border: 2px solid #f4f1ec;
+      border: 2px solid #ffffff;
       border-radius: 12px;
       animation: rotate 8s linear infinite;
     }
@@ -76,7 +76,7 @@
     }
 
     .icon::after {
-      content: 'X';
+      content: 'XG';
       position: absolute;
       width: 100%;
       height: 100%;
@@ -85,7 +85,7 @@
       justify-content: center;
       font-size: 48px;
       font-weight: 700;
-      font-family: 'Source Serif 4', Georgia, serif;
+      font-family: 'Inter', sans-serif;
       letter-spacing: -1px;
     }
 
@@ -102,7 +102,7 @@
     p {
       font-size: 18px;
       line-height: 1.6;
-      color: rgba(244, 241, 236, 0.8);
+      color: rgba(255, 255, 255, 0.9);
       margin-bottom: 40px;
       animation: fadeInUp 0.8s ease-out 0.4s backwards;
       letter-spacing: 0.3px;
@@ -130,31 +130,31 @@
       flex: 1;
       min-width: 250px;
       padding: 14px 20px;
-      border: 1px solid rgba(244, 241, 236, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 8px;
-      background: rgba(244, 241, 236, 0.05);
-      color: #f4f1ec;
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
       font-family: 'Inter', sans-serif;
       font-size: 16px;
       transition: all 0.3s ease;
     }
 
     input[type="email"]::placeholder {
-      color: rgba(244, 241, 236, 0.5);
+      color: rgba(255, 255, 255, 0.5);
     }
 
     input[type="email"]:focus {
       outline: none;
-      border-color: rgba(244, 241, 236, 0.6);
-      background: rgba(244, 241, 236, 0.08);
-      box-shadow: 0 0 20px rgba(244, 241, 236, 0.1);
+      border-color: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     }
 
     button {
       padding: 14px 36px;
-      border: 1px solid #f4f1ec;
+      border: 1px solid #ffffff;
       background: transparent;
-      color: #f4f1ec;
+      color: #ffffff;
       font-size: 16px;
       font-weight: 600;
       border-radius: 8px;
@@ -165,10 +165,10 @@
     }
 
     button:hover {
-      background: rgba(244, 241, 236, 0.1);
-      border-color: #f4f1ec;
+      background: rgba(255, 255, 255, 0.12);
+      border-color: #ffffff;
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(244, 241, 236, 0.15);
+      box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
     }
 
     button:active {
@@ -177,7 +177,7 @@
 
     .status-text {
       font-size: 14px;
-      color: rgba(244, 241, 236, 0.6);
+      color: rgba(255, 255, 255, 0.7);
       min-height: 20px;
     }
 
@@ -202,7 +202,7 @@
     .orb-1 {
       width: 400px;
       height: 400px;
-      background: #f4f1ec;
+      background: #ffffff;
       top: -100px;
       right: -100px;
       animation: drift 25s ease-in-out infinite;
@@ -211,7 +211,7 @@
     .orb-2 {
       width: 300px;
       height: 300px;
-      background: #a8d5e2;
+      background: #64b5f6;
       bottom: -50px;
       left: -50px;
       animation: drift 30s ease-in-out infinite reverse;
@@ -272,7 +272,7 @@
     </div>
 
     <h1>Coming Soon</h1>
-    <p>XGOV is accelerating innovation across government. We'll be here shortly.</p>
+    <p>XGov is connecting people and supporting civil service networks. We'll be here shortly.</p>
 
     <div class="cta-section">
       <form class="email-form" id="emailForm" onsubmit="handleSubmit(event)">
@@ -295,7 +295,7 @@
       const statusText = document.getElementById('statusText');
 
       statusText.textContent = '✓ Thank you! We'll be in touch.';
-      statusText.style.color = 'rgba(244, 241, 236, 0.8)';
+      statusText.style.color = 'rgba(255, 255, 255, 0.9)';
 
       document.getElementById('emailInput').value = '';
 
