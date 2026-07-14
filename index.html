@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>XGOV — Coming Soon</title>
+  <meta name="description" content="XGOV: Accelerating government innovation. Coming soon.">
+  <meta name="theme-color" content="#0e3a52">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0e3a52 0%, #04141f 100%);
+      color: #f4f1ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px;
+      max-width: 600px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .icon-wrapper {
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    .icon {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      position: relative;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .icon::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #f4f1ec;
+      border-radius: 12px;
+      animation: rotate 8s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .icon::after {
+      content: 'X';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      font-weight: 700;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: -1px;
+    }
+
+    h1 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 56px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+      animation: fadeInUp 0.8s ease-out 0.2s backwards;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: rgba(244, 241, 236, 0.8);
+      margin-bottom: 40px;
+      animation: fadeInUp 0.8s ease-out 0.4s backwards;
+      letter-spacing: 0.3px;
+    }
+
+    .cta-section {
+      animation: fadeInUp 0.8s ease-out 0.6s backwards;
+    }
+
+    .email-form {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+      .email-form {
+        flex-direction: column;
+      }
+    }
+
+    input[type="email"] {
+      flex: 1;
+      min-width: 250px;
+      padding: 14px 20px;
+      border: 1px solid rgba(244, 241, 236, 0.3);
+      border-radius: 8px;
+      background: rgba(244, 241, 236, 0.05);
+      color: #f4f1ec;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    input[type="email"]::placeholder {
+      color: rgba(244, 241, 236, 0.5);
+    }
+
+    input[type="email"]:focus {
+      outline: none;
+      border-color: rgba(244, 241, 236, 0.6);
+      background: rgba(244, 241, 236, 0.08);
+      box-shadow: 0 0 20px rgba(244, 241, 236, 0.1);
+    }
+
+    button {
+      padding: 14px 36px;
+      border: 1px solid #f4f1ec;
+      background: transparent;
+      color: #f4f1ec;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s ease;
+      letter-spacing: 0.3px;
+    }
+
+    button:hover {
+      background: rgba(244, 241, 236, 0.1);
+      border-color: #f4f1ec;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(244, 241, 236, 0.15);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .status-text {
+      font-size: 14px;
+      color: rgba(244, 241, 236, 0.6);
+      min-height: 20px;
+    }
+
+    .background-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .gradient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.1;
+      animation: drift 20s ease-in-out infinite;
+    }
+
+    .orb-1 {
+      width: 400px;
+      height: 400px;
+      background: #f4f1ec;
+      top: -100px;
+      right: -100px;
+      animation: drift 25s ease-in-out infinite;
+    }
+
+    .orb-2 {
+      width: 300px;
+      height: 300px;
+      background: #a8d5e2;
+      bottom: -50px;
+      left: -50px;
+      animation: drift 30s ease-in-out infinite reverse;
+    }
+
+    @keyframes drift {
+      0%, 100% { transform: translate(0, 0); }
+      50% { transform: translate(40px, -60px); }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 40px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .icon {
+        width: 80px;
+        height: 80px;
+      }
+
+      .icon::after {
+        font-size: 38px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-animation">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+  </div>
+
+  <div class="container">
+    <div class="icon-wrapper">
+      <div class="icon"></div>
+    </div>
+
+    <h1>Coming Soon</h1>
+    <p>XGOV is accelerating innovation across government. We'll be here shortly.</p>
+
+    <div class="cta-section">
+      <form class="email-form" id="emailForm" onsubmit="handleSubmit(event)">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          required
+          id="emailInput"
+        >
+        <button type="submit">Notify Me</button>
+      </form>
+      <div class="status-text" id="statusText"></div>
+    </div>
+  </div>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const email = document.getElementById('emailInput').value;
+      const statusText = document.getElementById('statusText');
+
+      statusText.textContent = '✓ Thank you! We'll be in touch.';
+      statusText.style.color = 'rgba(244, 241, 236, 0.8)';
+
+      document.getElementById('emailInput').value = '';
+
+      setTimeout(() => {
+        statusText.textContent = '';
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
